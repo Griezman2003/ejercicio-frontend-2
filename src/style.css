@@ -140,7 +140,7 @@ table td:last-child {
 
 .filter-input {
     width: 100%;
-    max-width: 400px; 
+    max-width: 800px; 
     padding: 10px;
     border: 1px solid #ddd; 
     border-radius: 5px; 
