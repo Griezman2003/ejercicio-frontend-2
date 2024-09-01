@@ -75,6 +75,12 @@ class App extends Component {
                   >
                     Editar
                   </button>
+                  <button 
+                    className="action-button-eliminar" 
+                    onClick={() => this.handleEditClick(employee)}
+                  >
+                    Eliminar
+                  </button>
                 </td>
               </tr>
             ))}
