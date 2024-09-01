@@ -3,7 +3,7 @@ import employees from './employees';
 import '../src/style.css';
 
 // Componente de la tabla de empleados
-const EmployeesTable = ({ employees, onEditClick, onDeleteClick, isUSD, onToggleCurrency, filterText, onFilterChange }) => (
+const EmployeesTable = ({ employees, onEditClick, onDeleteClick, isUSD, onToggleCurrency, filterText, onFilterChange, handlePrintClick }) => (
   <div>
     <div className="filter-container">
       <input
@@ -60,6 +60,9 @@ const EmployeesTable = ({ employees, onEditClick, onDeleteClick, isUSD, onToggle
     </table>
     <button className="action-button-us" onClick={onToggleCurrency}>
       Mostrar moneda en {isUSD ? 'MXN' : 'USD'}
+    </button>
+    <button className="action-button-print" onClick={handlePrintClick}>
+      Imprimir Lista
     </button>
   </div>
 );
@@ -151,6 +154,12 @@ class App extends Component {
     this.setState({ filterText: event.target.value });
   };
   
+  handlePrintClick = () => {
+    const { employees } = this.state;
+    console.log('Lista de Empleados:', employees);
+    alert('lista cargada en la consola');
+  };
+  
   render() {
     const { employees, editingEmployee, newSalary, isUSD, filterText } = this.state;
     return (
@@ -163,6 +172,7 @@ class App extends Component {
           onToggleCurrency={this.handleToggleCurrency}
           filterText={filterText}
           onFilterChange={this.handleFilterChange}
+          handlePrintClick={this.handlePrintClick}
         />
         {editingEmployee && (
           <EditForm 
