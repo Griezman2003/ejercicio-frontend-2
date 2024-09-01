@@ -128,3 +128,32 @@ table td:last-child {
 .edit-form button:hover {
     background-color: #007a63;
 }
+
+/* estilos de barra de busqueda */
+
+.filter-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-input {
+    width: 100%;
+    max-width: 400px; 
+    padding: 10px;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s ease; 
+}
+
+.filter-input:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+.filter-input::placeholder {
+    color: #888; 
+}
