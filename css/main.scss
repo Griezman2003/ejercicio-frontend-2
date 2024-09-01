@@ -16,3 +16,184 @@ body {
 }
 
 /* Código de la tabla aquí */
+
+// Estilos para la tabla
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: center;
+
+  thead {
+      tr {
+          background-color: #009879;
+          color: #ffffff;
+          text-align: center;
+          font-weight: bold;
+      }
+  }
+
+  th, td {
+      padding: 12px 15px;
+  }
+
+  tbody {
+      tr {
+          border-bottom: 1px solid #dddddd;
+
+          &:nth-of-type(even) {
+              background-color: #f3f3f3;
+          }
+
+          &:last-of-type {
+              border-bottom: 2px solid #009879;
+          }
+
+          &:hover {
+              background-color: #f1f1f1;
+              cursor: pointer;
+          }
+
+          td:last-child {
+              text-align: center;
+          }
+      }
+  }
+}
+
+// Contenedor de botones
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  width: 100%;
+}
+
+// Botones de acción
+.action-button {
+  background-color: #009879;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button-eliminar {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button-us {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button-print {
+  background-color: #28a745;
+  margin-left: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+// Formulario de edición
+.edit-form {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  h2 {
+      margin-top: 0;
+  }
+
+  form {
+      display: flex;
+      flex-direction: column;
+  }
+
+  label {
+      margin-bottom: 10px;
+  }
+
+  input {
+      margin-top: 5px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+  }
+
+  button {
+      margin-top: 10px;
+      background-color: #009879;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+          background-color: #007a63;
+      }
+  }
+}
+
+// Estilos para la barra de búsqueda
+.filter-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-input {
+  width: 100%;
+  max-width: 800px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+
+  &:focus {
+      border-color: #007bff;
+      outline: none;
+  }
+
+  &::placeholder {
+      color: #888;
+  }
+}
+

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import employees from './employees';
-import '../src/style.css';
+import '../src/main.css';
 
 // Componente de la tabla de empleados
 const EmployeesTable = ({ employees, onEditClick, onDeleteClick, isUSD, onToggleCurrency, filterText, onFilterChange, handlePrintClick }) => (
