@@ -41,6 +41,12 @@ class App extends Component {
     });
   };
 
+  handleDeleteClick = (employeeId) => {
+    const { employees } = this.state;
+    const updatedEmployees = employees.filter(employee => employee.id !== employeeId);
+    this.setState({ employees: updatedEmployees });
+  };
+
   render() {
     const { employees, editingEmployee, newSalary } = this.state;
     return (
@@ -77,7 +83,7 @@ class App extends Component {
                   </button>
                   <button 
                     className="action-button-eliminar" 
-                    onClick={() => this.handleEditClick(employee)}
+                    onClick={() => this. handleDeleteClick(employee.id)}
                   >
                     Eliminar
                   </button>
